@@ -749,7 +749,19 @@ const CONTENT_EXTRA = {
       { sentence: "Sie hat ___ Bruder einen Brief geschrieben.", answer: "ihrem", hint: "possessive, dative masculine", english: "She wrote her brother a letter.",
         explanation: "The indirect object (the recipient) is dative. 'Bruder' is masculine: ihrem Bruder." },
       { sentence: "Wenn ich Zeit ___, besuche ich dich.", answer: "habe", hint: "haben (ich), verb at end after wenn", english: "If I have time, I will visit you.",
-        explanation: "In a wenn-clause the conjugated verb goes to the end: ... wenn ich Zeit habe." }
+        explanation: "In a wenn-clause the conjugated verb goes to the end: ... wenn ich Zeit habe." },
+      { sentence: "Gestern ___ ich den ganzen Tag im Büro gearbeitet.", answer: "habe", hint: "Perfekt auxiliary (haben, ich-form)", english: "Yesterday I worked in the office all day.",
+        explanation: "The Perfekt of 'arbeiten' uses haben. When the sentence starts with 'Gestern', the auxiliary stays in second position: Gestern habe ich ... gearbeitet." },
+      { sentence: "Ich bleibe zu Hause, ___ ich bin krank.", answer: "denn", hint: "coordinating conjunction: because (verb in 2nd position)", english: "I am staying at home because I am ill.",
+        explanation: "'denn' is a coordinating conjunction and does not change the word order: ich bin krank. (With 'weil' the verb would go to the end.)" },
+      { sentence: "Ich schenke ___ Mutter einen Blumenstrauß.", answer: "meiner", hint: "possessive article (feminine, dative)", english: "I am giving my mother a bouquet of flowers.",
+        explanation: "'schenken' takes a dative person: der Mutter. The feminine dative of 'mein' is 'meiner'." },
+      { sentence: "Er ist mit ___ Fahrrad zur Arbeit gefahren.", answer: "dem", hint: "definite article (neuter, dative)", english: "He went to work by bike.",
+        explanation: "'mit' always takes the dative. 'das Fahrrad' is neuter, so the dative article is 'dem'." },
+      { sentence: "Hast du schon gefrühstückt? — Ja, ich habe Brot mit Käse ___.", answer: "gegessen", hint: "past participle of essen", english: "Have you had breakfast yet? — Yes, I ate bread with cheese.",
+        explanation: "essen is a strong verb: its past participle is 'gegessen' (ge- + stem eß/ess + -en)." },
+      { sentence: "Hier ___ man nicht rauchen. Das ist verboten.", answer: "darf", hint: "modal verb: be allowed to", english: "You must not smoke here. It is forbidden.",
+        explanation: "'nicht dürfen' expresses a prohibition. With 'man' the modal takes the er-form: man darf." }
     ],
     stories: [
       {
@@ -771,6 +783,17 @@ const CONTENT_EXTRA = {
           { question: "Was hat der Vater gemacht?", options: ["Er hat gegrillt", "Er hat gebadet", "Er hat ein Buch gelesen"], correct: 0, explanation: "'der Vater hat gegrillt.'" },
           { question: "Was ist am Nachmittag passiert?", options: ["Es war sehr heiß", "Ein Gewitter ist gekommen", "Das Fahrrad war kaputt"], correct: 1, explanation: "'Am Nachmittag ist plötzlich ein Gewitter gekommen.'" }
         ]
+      },
+      {
+        title: "Die verpasste Verbindung",
+        story: `Am Freitagabend wollte Marie ihre Schwester in Köln besuchen. Sie ist rechtzeitig zum Bahnhof gegangen und hat ein Ticket gekauft. Aber der erste Zug hatte vierzig Minuten Verspätung, deshalb hat sie in Frankfurt den Anschlusszug verpasst.\n\nMarie war ärgerlich, denn sie wollte nicht lange warten. Sie hat bei der Auskunft gefragt. Ein freundlicher Mitarbeiter hat ihr erklärt: „Der nächste Zug nach Köln fährt in einer Stunde. Sie müssen nicht noch einmal bezahlen.“\n\nIn der Wartezeit hat Marie einen Tee getrunken und ihrer Schwester eine Nachricht geschrieben. Die Schwester hat geantwortet: „Kein Problem! Ich hole dich am Bahnhof ab.“ Um halb elf ist Marie endlich angekommen.`,
+        english_summary: "Marie misses her connecting train in Frankfurt because of a delay. The information desk tells her she can take the next train for free, and her sister picks her up in Cologne.",
+        questions: [
+          { question: "Warum hat Marie den Anschlusszug verpasst?", options: ["Sie ist zu spät zum Bahnhof gegangen", "Der erste Zug hatte Verspätung", "Sie hat das Ticket vergessen"], correct: 1, explanation: "'Der erste Zug hatte vierzig Minuten Verspätung.'" },
+          { question: "Muss Marie noch einmal bezahlen?", options: ["Ja, ein neues Ticket", "Nein, sie muss nicht bezahlen", "Ja, aber nur die Hälfte"], correct: 1, explanation: "'Sie müssen nicht noch einmal bezahlen.'" },
+          { question: "Was macht Marie in der Wartezeit?", options: ["Sie trinkt Tee und schreibt eine Nachricht", "Sie geht in die Stadt", "Sie ruft ihre Mutter an"], correct: 0, explanation: "'... hat einen Tee getrunken und ihrer Schwester eine Nachricht geschrieben.'" },
+          { question: "Wer holt Marie am Bahnhof ab?", options: ["Ihre Schwester", "Ihr Freund", "Ihre Mutter"], correct: 0, explanation: "'Ich hole dich am Bahnhof ab' says the sister." }
+        ]
       }
     ],
     vocabulary: [
@@ -785,7 +808,27 @@ const CONTENT_EXTRA = {
       { word: "sich freuen auf", type: "phrase", pronunciation: "zikh FROY-en owf", meaning: "to look forward to", example: "Ich freue mich auf den Urlaub.", example_english: "I'm looking forward to the holiday.", tip: "'sich freuen über' means to be happy about something present." },
       { word: "vergleichen", type: "verb", pronunciation: "fer-GLY-khen", meaning: "to compare", example: "Vergleich die Preise!", example_english: "Compare the prices!", tip: "Irregular: vergleichen, verglich, hat verglichen." },
       { word: "die Erfahrung", type: "noun", pronunciation: "er-FAH-roong", meaning: "experience", example: "Ich habe gute Erfahrungen gemacht.", example_english: "I've had good experiences.", tip: "Use 'Erfahrungen machen' = to have experiences." },
-      { word: "pünktlich", type: "adjective", pronunciation: "PÜNKT-likh", meaning: "punctual, on time", example: "Der Zug ist pünktlich.", example_english: "The train is on time.", tip: "A cherished virtue in Germany." }
+      { word: "pünktlich", type: "adjective", pronunciation: "PÜNKT-likh", meaning: "punctual, on time", example: "Der Zug ist pünktlich.", example_english: "The train is on time.", tip: "A cherished virtue in Germany." },
+      { word: "die Einladung", type: "noun", pronunciation: "YN-lah-doong", meaning: "invitation", example: "Danke für die Einladung!", example_english: "Thank you for the invitation!", tip: "From einladen (to invite)." },
+      { word: "der Termin", type: "noun", pronunciation: "ter-MEEN", meaning: "appointment", example: "Ich habe morgen einen Termin beim Arzt.", example_english: "I have an appointment at the doctor's tomorrow.", tip: "Not for 'dates' with a partner: that is 'Date' or 'Verabredung'." },
+      { word: "verpassen", type: "verb", pronunciation: "fer-PA-sen", meaning: "to miss (a train, chance)", example: "Beeil dich, sonst verpasst du den Bus.", example_english: "Hurry up, or you will miss the bus.", tip: "Perfekt: hat verpasst (no ge-)." },
+      { word: "abholen", type: "verb", pronunciation: "AP-hoh-len", meaning: "to pick up, to collect", example: "Ich hole dich um acht Uhr ab.", example_english: "I will pick you up at eight o'clock.", tip: "Separable verb: ich hole ... ab." },
+      { word: "das Angebot", type: "noun", pronunciation: "AN-geh-boht", meaning: "offer, special offer", example: "Das Angebot gilt nur diese Woche.", example_english: "The offer is only valid this week.", tip: "From anbieten (to offer)." },
+      { word: "die Auskunft", type: "noun", pronunciation: "OWS-koonft", meaning: "information (enquiry)", example: "Die Auskunft ist am Schalter drei.", example_english: "The information desk is at counter three.", tip: "Singular only: 'eine Auskunft geben'." },
+      { word: "sich erinnern an", type: "verb", pronunciation: "zikh er-IN-ern an", meaning: "to remember", example: "Ich erinnere mich an den Urlaub.", example_english: "I remember the holiday.", tip: "Reflexive + accusative with 'an'." },
+      { word: "ausleihen", type: "verb", pronunciation: "OWS-ly-en", meaning: "to borrow, to lend", example: "Ich habe ein Buch aus der Bibliothek ausgeliehen.", example_english: "I borrowed a book from the library.", tip: "Separable verb: leihen + aus." },
+      { word: "der Unterschied", type: "noun", pronunciation: "OON-ter-sheet", meaning: "difference", example: "Es gibt einen großen Unterschied.", example_english: "There is a big difference.", tip: "Plural: die Unterschiede." },
+      { word: "ausfüllen", type: "verb", pronunciation: "OWS-fü-len", meaning: "to fill in (a form)", example: "Bitte füllen Sie das Formular aus.", example_english: "Please fill in the form.", tip: "Separable verb: ich fülle ... aus." },
+      { word: "sich anmelden", type: "verb", pronunciation: "zikh AN-mel-den", meaning: "to register, to sign up", example: "Ich melde mich für den Kurs an.", example_english: "I am signing up for the course.", tip: "Opposite: sich abmelden." },
+      { word: "die Gelegenheit", type: "noun", pronunciation: "geh-LAY-gen-hyt", meaning: "opportunity, occasion", example: "Das ist eine gute Gelegenheit.", example_english: "That is a good opportunity.", tip: "Feminine -heit noun: plural die Gelegenheiten." },
+      { word: "ehrlich", type: "adjective", pronunciation: "AIR-likh", meaning: "honest", example: "Sei bitte ehrlich zu mir.", example_english: "Please be honest with me.", tip: "Adverb use: 'ehrlich gesagt' = to be honest." },
+      { word: "der Verkehr", type: "noun", pronunciation: "fer-KAIR", meaning: "traffic", example: "Heute ist viel Verkehr.", example_english: "There is a lot of traffic today.", tip: "Singular only in this meaning." },
+      { word: "das Geschenk", type: "noun", pronunciation: "geh-SHENK", meaning: "gift, present", example: "Das Geschenk ist für dich.", example_english: "The present is for you.", tip: "From schenken (to give as a gift)." },
+      { word: "sauber", type: "adjective", pronunciation: "ZOW-ber", meaning: "clean", example: "Das Zimmer ist sauber.", example_english: "The room is clean.", tip: "The -e- drops before an ending: ein sauberes Zimmer." },
+      { word: "die Heizung", type: "noun", pronunciation: "HY-tsoong", meaning: "heating, radiator", example: "Die Heizung ist kaputt.", example_english: "The heating is broken.", tip: "From heizen (to heat)." },
+      { word: "umsteigen", type: "verb", pronunciation: "OOM-shty-gen", meaning: "to change (trains/buses)", example: "In Hannover müssen wir umsteigen.", example_english: "We have to change in Hanover.", tip: "Perfekt with sein: ist umgestiegen." },
+      { word: "die Verspätung", type: "noun", pronunciation: "fer-SHPAY-toong", meaning: "delay", example: "Der Zug hat zehn Minuten Verspätung.", example_english: "The train has a ten-minute delay.", tip: "'Verspätung haben' = to be late/delayed." },
+      { word: "vorschlagen", type: "verb", pronunciation: "FOR-shlah-gen", meaning: "to suggest, to propose", example: "Ich schlage vor, wir gehen ins Kino.", example_english: "I suggest we go to the cinema.", tip: "Separable; noun: der Vorschlag." }
     ]
   },
 
@@ -812,7 +855,19 @@ const CONTENT_EXTRA = {
       { sentence: "Das Buch, ___ ich gestern gelesen habe, war spannend.", answer: "das", hint: "relative pronoun (neuter accusative)", english: "The book that I read yesterday was exciting.",
         explanation: "Buch is neuter, and in the relative clause it is the direct object of 'gelesen habe', so accusative neuter: das." },
       { sentence: "Das Fenster ___ geöffnet.", answer: "ist", hint: "Zustandspassiv: sein + Partizip II", english: "The window is open.",
-        explanation: "The Zustandspassiv describes a resulting state: sein + Partizip II. Compare 'wird geöffnet' (is being opened)." }
+        explanation: "The Zustandspassiv describes a resulting state: sein + Partizip II. Compare 'wird geöffnet' (is being opened)." },
+      { sentence: "Wenn ich mehr Zeit ___, würde ich öfter Sport treiben.", answer: "hätte", hint: "Konjunktiv II of haben", english: "If I had more time, I would do sport more often.",
+        explanation: "The unreal condition uses Konjunktiv II. 'haben' becomes 'hätte' (not 'würde haben')." },
+      { sentence: "Das Gebäude ___ im Jahr 1990 renoviert.", answer: "wurde", hint: "Passiv Präteritum (werden)", english: "The building was renovated in 1990.",
+        explanation: "Passive in the past: wurde + past participle. The agent is unimportant, so the Vorgangspassiv is used." },
+      { sentence: "Der Mann, ___ Auto vor dem Haus steht, ist mein Nachbar.", answer: "dessen", hint: "relative pronoun (genitive, masculine)", english: "The man whose car is parked in front of the house is my neighbour.",
+        explanation: "The genitive relative pronoun for masculine and neuter is 'dessen' and replaces 'his/whose'. No article follows it." },
+      { sentence: "Ich interessiere ___ sehr für moderne Kunst.", answer: "mich", hint: "reflexive pronoun (ich, accusative)", english: "I am very interested in modern art.",
+        explanation: "'sich interessieren für' is a reflexive verb. With 'ich' the reflexive pronoun is 'mich'." },
+      { sentence: "___ des Regens gingen wir spazieren.", answer: "Trotz", hint: "genitive preposition: despite", english: "Despite the rain we went for a walk.",
+        explanation: "'trotz' + genitive means despite, and fits because the walk happened anyway. 'wegen' would mean because of." },
+      { sentence: "Ich warte darauf, ___ der Bus kommt.", answer: "dass", hint: "subordinating conjunction", english: "I am waiting for the bus to come.",
+        explanation: "'warten auf' with a clause uses 'darauf, dass ...'. The verb goes to the end of the dass-clause." }
     ],
     stories: [
       {
@@ -834,6 +889,28 @@ const CONTENT_EXTRA = {
           { question: "Wie viel weniger Autos waren unterwegs?", options: ["Etwa 10 Prozent", "Etwa 20 Prozent", "Etwa 50 Prozent"], correct: 1, explanation: "'ungefähr 20 Prozent weniger Autos'." },
           { question: "Was kritisierten einige Teilnehmer?", options: ["Die Fahrradwege waren zu schmal", "Die Busse waren zu voll", "Die Belohnung war zu klein"], correct: 1, explanation: "'... dass die Busse zu voll waren.'" }
         ]
+      },
+      {
+        title: "Endlich wieder schlafen",
+        story: `Seit mehreren Monaten schlief Jonas schlecht. Abends lag er stundenlang wach, und morgens fühlte er sich so müde, dass er kaum aus dem Bett kam. Zuerst dachte er, der Stress im Büro sei schuld daran. Wenn er weniger arbeiten würde, ginge es ihm sicher besser.\n\nSchließlich ging er zu seiner Hausärztin. Sie stellte ihm viele Fragen und fand heraus, dass er bis spät abends auf sein Handy schaute und täglich mehrere Tassen Kaffee trank. „Das beeinflusst Ihren Schlaf stärker, als Sie denken“, erklärte sie.\n\nJonas beschloss, sich an einen festen Rhythmus zu gewöhnen. Das Handy blieb nach zehn Uhr im Flur, und Kaffee gab es nur noch am Vormittag. Nach zwei Wochen merkte er den Unterschied: Er schlief schneller ein und wachte ausgeruht auf. Heute freut er sich darüber, dass er seine Energie zurückgewonnen hat.`,
+        english_summary: "Jonas sleeps badly and first blames work stress. His doctor finds that late phone use and coffee are the cause; after he changes his habits he sleeps well again.",
+        questions: [
+          { question: "Was dachte Jonas zuerst?", options: ["Der Stress im Büro sei die Ursache", "Er brauche ein neues Bett", "Er sei krank"], correct: 0, explanation: "'Zuerst dachte er, der Stress im Büro sei schuld daran.'" },
+          { question: "Was fand die Ärztin heraus?", options: ["Jonas arbeitete zu wenig", "Jonas nutzte abends das Handy und trank viel Kaffee", "Jonas aß zu spät"], correct: 1, explanation: "She found he used his phone late and drank several coffees a day." },
+          { question: "Was geschah nach zehn Uhr abends?", options: ["Das Handy blieb im Flur", "Jonas ging spazieren", "Jonas trank Tee"], correct: 0, explanation: "'Das Handy blieb nach zehn Uhr im Flur.'" },
+          { question: "Was merkte Jonas nach zwei Wochen?", options: ["Er schlief schneller ein", "Er hatte mehr Stress", "Er brauchte mehr Kaffee"], correct: 0, explanation: "'Er schlief schneller ein und wachte ausgeruht auf.'" }
+        ]
+      },
+      {
+        title: "Das Dorf ohne Laden",
+        story: `In einem kleinen Dorf im Schwarzwald musste der letzte Supermarkt schließen, weil zu wenige Kunden kamen. Für viele ältere Bewohner war das ein großes Problem, denn der nächste Laden war zehn Kilometer entfernt.\n\nDie Einwohner trafen sich im Gemeindehaus und überlegten, was man tun könnte. Eine Lehrerin schlug vor, einen eigenen Dorfladen zu gründen, der von allen gemeinsam getragen wird. Zuerst waren viele skeptisch, doch nach einigen Wochen hatten sich genug Menschen bereit erklärt, Anteile zu kaufen.\n\nHeute wird der Laden von Freiwilligen geführt. Man findet dort regionale Produkte, die von Bauern aus der Umgebung geliefert werden. Außerdem gibt es einen kleinen Tisch, an dem man Kaffee trinken kann. Der Laden ist nicht nur ein Geschäft, sondern auch ein Treffpunkt geworden.`,
+        english_summary: "After the last supermarket closes, villagers found their own cooperative shop. It is run by volunteers, sells regional products and has become a meeting place.",
+        questions: [
+          { question: "Warum musste der Supermarkt schließen?", options: ["Er war zu teuer", "Es kamen zu wenige Kunden", "Der Besitzer zog um"], correct: 1, explanation: "'... weil zu wenige Kunden kamen.'" },
+          { question: "Wer schlug die Gründung eines Dorfladens vor?", options: ["Der Bürgermeister", "Eine Lehrerin", "Ein Bauer"], correct: 1, explanation: "'Eine Lehrerin schlug vor, einen eigenen Dorfladen zu gründen.'" },
+          { question: "Wer führt den Laden heute?", options: ["Freiwillige", "Eine große Firma", "Die Gemeinde allein"], correct: 0, explanation: "'Heute wird der Laden von Freiwilligen geführt.'" },
+          { question: "Was ist der Laden außer einem Geschäft noch?", options: ["Ein Museum", "Ein Treffpunkt", "Eine Schule"], correct: 1, explanation: "'... ein Treffpunkt geworden.'" }
+        ]
       }
     ],
     vocabulary: [
@@ -848,7 +925,27 @@ const CONTENT_EXTRA = {
       { word: "verlängern", type: "verb", pronunciation: "fer-LENG-ern", meaning: "to extend, to renew", example: "Ich verlängere meinen Vertrag.", example_english: "I'm extending my contract.", tip: "From lang (long)." },
       { word: "sich beschweren", type: "verb", pronunciation: "zikh be-SHVAY-ren", meaning: "to complain", example: "Er beschwert sich über den Lärm.", example_english: "He complains about the noise.", tip: "sich beschweren über + accusative." },
       { word: "möglichst", type: "adverb", pronunciation: "MÖH-glikhst", meaning: "as ... as possible", example: "Komm möglichst bald.", example_english: "Come as soon as possible.", tip: "möglichst + adjective/adverb." },
-      { word: "der Teilnehmer", type: "noun", pronunciation: "TYL-nay-mer", meaning: "participant", example: "Alle Teilnehmer bekommen ein Zertifikat.", example_english: "All participants receive a certificate.", tip: "Feminine: die Teilnehmerin." }
+      { word: "der Teilnehmer", type: "noun", pronunciation: "TYL-nay-mer", meaning: "participant", example: "Alle Teilnehmer bekommen ein Zertifikat.", example_english: "All participants receive a certificate.", tip: "Feminine: die Teilnehmerin." },
+      { word: "die Umgebung", type: "noun", pronunciation: "OOM-gay-boong", meaning: "surroundings, area", example: "Die Umgebung ist sehr ruhig.", example_english: "The surrounding area is very quiet.", tip: "From umgeben (to surround)." },
+      { word: "die Voraussetzung", type: "noun", pronunciation: "for-OWS-zet-soong", meaning: "prerequisite, condition", example: "Gute Deutschkenntnisse sind eine Voraussetzung.", example_english: "Good German skills are a prerequisite.", tip: "'unter der Voraussetzung, dass' = provided that." },
+      { word: "sich bewerben um", type: "verb", pronunciation: "zikh beh-VER-ben oom", meaning: "to apply for", example: "Sie bewirbt sich um eine Stelle.", example_english: "She is applying for a position.", tip: "Stem change: du bewirbst dich, er bewirbt sich." },
+      { word: "die Genehmigung", type: "noun", pronunciation: "geh-NAY-mi-goong", meaning: "permit, approval", example: "Für den Umbau brauchen wir eine Genehmigung.", example_english: "We need a permit for the conversion.", tip: "Verb: genehmigen." },
+      { word: "anstrengend", type: "adjective", pronunciation: "AN-shtreng-ent", meaning: "tiring, strenuous", example: "Die Wanderung war sehr anstrengend.", example_english: "The hike was very tiring.", tip: "From sich anstrengen (to make an effort)." },
+      { word: "nachdenklich", type: "adjective", pronunciation: "NAKH-denk-likh", meaning: "thoughtful, pensive", example: "Er wirkte nachdenklich.", example_english: "He seemed thoughtful.", tip: "Verb: nachdenken." },
+      { word: "der Vorschlag", type: "noun", pronunciation: "FOR-shlahg", meaning: "suggestion, proposal", example: "Hast du einen besseren Vorschlag?", example_english: "Do you have a better suggestion?", tip: "Plural: die Vorschläge." },
+      { word: "die Entwicklung", type: "noun", pronunciation: "ent-VIK-loong", meaning: "development", example: "Die Entwicklung verläuft positiv.", example_english: "The development is positive.", tip: "Verb: sich entwickeln." },
+      { word: "übernehmen", type: "verb", pronunciation: "ü-ber-NAY-men", meaning: "to take over, to take on", example: "Wer übernimmt die Verantwortung?", example_english: "Who is taking on the responsibility?", tip: "Inseparable verb: übernommen." },
+      { word: "erwähnen", type: "verb", pronunciation: "er-VAY-nen", meaning: "to mention", example: "Das hast du gar nicht erwähnt.", example_english: "You did not mention that at all.", tip: "Formal-neutral verb; noun: die Erwähnung." },
+      { word: "die Verantwortung", type: "noun", pronunciation: "fer-ANT-vor-toong", meaning: "responsibility", example: "Er trägt die Verantwortung für das Team.", example_english: "He bears the responsibility for the team.", tip: "'Verantwortung tragen/übernehmen' are common collocations." },
+      { word: "ausreichend", type: "adjective", pronunciation: "OWS-ry-khent", meaning: "sufficient", example: "Wir haben ausreichend Zeit.", example_english: "We have sufficient time.", tip: "Also a school grade: 'ausreichend' = pass." },
+      { word: "die Veranstaltung", type: "noun", pronunciation: "fer-AN-shtal-toong", meaning: "event", example: "Die Veranstaltung beginnt um 19 Uhr.", example_english: "The event begins at 7 pm.", tip: "Verb: veranstalten (to organise)." },
+      { word: "sich auseinandersetzen mit", type: "verb", pronunciation: "zikh ows-y-NAN-der-zet-sen mit", meaning: "to engage with, to deal with", example: "Ich setze mich mit dem Thema auseinander.", example_english: "I am engaging with the topic.", tip: "Formal; often used in academic contexts." },
+      { word: "der Eindruck", type: "noun", pronunciation: "YN-drook", meaning: "impression", example: "Er machte einen guten Eindruck.", example_english: "He made a good impression.", tip: "'einen Eindruck machen' = to make an impression." },
+      { word: "vermeiden", type: "verb", pronunciation: "fer-MY-den", meaning: "to avoid", example: "Wir sollten Streit vermeiden.", example_english: "We should avoid arguments.", tip: "Past: vermied, vermieden." },
+      { word: "die Unterkunft", type: "noun", pronunciation: "OON-ter-koonft", meaning: "accommodation", example: "Die Unterkunft war sauber und günstig.", example_english: "The accommodation was clean and cheap.", tip: "Plural: die Unterkünfte." },
+      { word: "aufgrund", type: "preposition", pronunciation: "OWF-groont", meaning: "because of, due to (+ genitive)", example: "Aufgrund des Wetters bleiben wir zu Hause.", example_english: "Because of the weather we are staying at home.", tip: "Also written 'auf Grund'; formal." },
+      { word: "beeinflussen", type: "verb", pronunciation: "beh-YN-floo-sen", meaning: "to influence", example: "Die Musik beeinflusst meine Stimmung.", example_english: "Music influences my mood.", tip: "Inseparable; noun: der Einfluss." },
+      { word: "die Herausforderung", type: "noun", pronunciation: "her-OWS-for-deh-roong", meaning: "challenge", example: "Der neue Job ist eine Herausforderung.", example_english: "The new job is a challenge.", tip: "From herausfordern (to challenge)." }
     ]
   },
 
@@ -875,7 +972,19 @@ const CONTENT_EXTRA = {
       { sentence: "Es ist ___, dass sich das Klima verändert.", answer: "unbestritten", hint: "adjective: undisputed", english: "It is undisputed that the climate is changing.",
         explanation: "unbestritten is common in formal and journalistic register: Es ist unbestritten, dass ..." },
       { sentence: "Die Zahl der Arbeitslosen ist im Vergleich ___ Vorjahr gesunken.", answer: "zum", hint: "preposition + article (dative neuter)", english: "The number of unemployed has fallen compared with last year.",
-        explanation: "im Vergleich zu + dative: zu + dem = zum Vorjahr." }
+        explanation: "im Vergleich zu + dative: zu + dem = zum Vorjahr." },
+      { sentence: "Der Sprecher sagte, die Regierung ___ die Entscheidung bereits getroffen.", answer: "habe", hint: "Konjunktiv I of haben", english: "The spokesman said the government had already made the decision.",
+        explanation: "Konjunktiv I marks indirect speech in news reports: er/sie/es habe + participle." },
+      { sentence: "Bis nächste Woche ___ er das Projekt abgeschlossen haben.", answer: "wird", hint: "Futur II auxiliary", english: "He will have completed the project by next week.",
+        explanation: "Futur II = werden + past participle + haben/sein. It expresses an action that will be finished by a future point." },
+      { sentence: "Die vor einem Jahr ___ Studie wurde nun widerlegt.", answer: "veröffentlichte", hint: "Partizip II used as attribute (veröffentlichen + ending)", english: "The study published a year ago has now been refuted.",
+        explanation: "An extended participial attribute precedes the noun: die ... veröffentlichte Studie. Feminine nominative adds -e." },
+      { sentence: "Die Regierung hat beschlossen, das Gesetz in Kraft zu ___.", answer: "setzen", hint: "Funktionsverbgefüge: in Kraft ___", english: "The government has decided to bring the law into force.",
+        explanation: "'in Kraft setzen' is a fixed verb-noun phrase meaning to bring into effect. Its counterpart is 'in Kraft treten'." },
+      { sentence: "Das ständige ___ der Mieten belastet viele Familien.", answer: "Steigen", hint: "nominalised verb: steigen", english: "The constant rise in rents is a burden on many families.",
+        explanation: "A verb can be nominalised: steigen → das Steigen. This is typical for written, formal German." },
+      { sentence: "Es kommt ___ an, ob wir rechtzeitig fertig werden.", answer: "darauf", hint: "pronominal adverb: ankommen auf", english: "It depends on whether we finish in time.",
+        explanation: "'ankommen auf' + dass/ob-clause needs the pronominal adverb: darauf." }
     ],
     stories: [
       {
@@ -897,6 +1006,28 @@ const CONTENT_EXTRA = {
           { question: "Was fehlt in vielen Gemeinden?", options: ["Supermärkte", "Kindergartenplätze, Hausärzte und schnelles Internet", "Straßen"], correct: 1, explanation: "'Es fehlen Kindergartenplätze, Hausärzte und schnelles Internet.'" },
           { question: "Wie beurteilen Soziologen den Trend?", options: ["Er wird sicher anhalten", "Seine Dauer ist umstritten", "Er ist bereits vorbei"], correct: 1, explanation: "'... ist unter Soziologen umstritten.'" }
         ]
+      },
+      {
+        title: "Mehrweg statt Einweg",
+        story: `Die Stadt Lindenau hatte lange mit einem wachsenden Müllproblem zu kämpfen: Jeden Tag landeten Tausende Kaffeebecher und Essensschalen im Abfall, die kaum recycelt werden konnten. Nachdem der Stadtrat monatelang über mögliche Maßnahmen debattiert hatte, entschied er sich für ein Pfandsystem, das Gastronomen und Kunden gleichermaßen einbinden sollte.\n\nDas Prinzip ist einfach: Wer ein Getränk zum Mitnehmen bestellt, erhält es in einem wiederverwendbaren Becher und zahlt dafür einen Euro Pfand. Den Becher kann man in jedem teilnehmenden Lokal zurückgeben. Anfangs war die Skepsis groß; mehrere Wirte befürchteten einen erheblichen Mehraufwand, und manche Kunden fanden das System umständlich.\n\nNach einem Jahr zeigte sich jedoch ein deutlicher Rückgang des Verpackungsmülls. Die Wirte stellten fest, dass sich der Aufwand in Grenzen hielt, zumal die Becher von einem zentralen Dienst gespült werden. Dennoch bleibt umstritten, ob das Modell auf größere Städte übertragbar wäre, wo Logistik und Rückgabequoten ganz andere Herausforderungen mit sich brächten.`,
+        english_summary: "A fictional town introduces a reusable-cup deposit system. Initial scepticism fades as packaging waste falls, though it is unclear whether the model would work in larger cities.",
+        questions: [
+          { question: "Wofür entschied sich der Stadtrat?", options: ["Für ein Verbot von Kaffee", "Für ein Pfandsystem", "Für höhere Müllgebühren"], correct: 1, explanation: "'... entschied er sich für ein Pfandsystem.'" },
+          { question: "Wie viel Pfand zahlt man für einen Becher?", options: ["Fünfzig Cent", "Einen Euro", "Zwei Euro"], correct: 1, explanation: "'... zahlt dafür einen Euro Pfand.'" },
+          { question: "Warum war die Skepsis anfangs groß?", options: ["Wirte fürchteten einen erheblichen Mehraufwand", "Die Becher waren zu teuer", "Niemand trank Kaffee"], correct: 0, explanation: "'... befürchteten einen erheblichen Mehraufwand.'" },
+          { question: "Was ist laut Text umstritten?", options: ["Ob das Modell in größeren Städten funktionieren würde", "Ob Pfand sinnvoll ist", "Ob Becher sauber sind"], correct: 0, explanation: "'... ob das Modell auf größere Städte übertragbar wäre.'" }
+        ]
+      },
+      {
+        title: "Wenn Forschung verständlich wird",
+        story: `Eine Biologin an einer Universität hatte drei Jahre lang das Verhalten von Bienen in städtischen Gärten untersucht. Als ihre Studie abgeschlossen war, stellte sie fest, dass die Ergebnisse zwar fachlich überzeugend, für Laien jedoch kaum verständlich waren. Die Fachzeitschrift, in der sie veröffentlichte, wurde fast ausschließlich von Experten gelesen.\n\nAuf Anraten einer Kollegin begann sie, ihre Erkenntnisse in kurzen Videos und bei öffentlichen Abendveranstaltungen zu präsentieren. Dabei lernte sie, komplizierte Zusammenhänge auf wenige zentrale Aussagen zu reduzieren, ohne sie zu verfälschen. „Wer verstanden werden will, muss zuhören können“, sagte sie später.\n\nNicht alle Kollegen begrüßten diese Entwicklung. Manche befürchteten, dass die Vereinfachung dem wissenschaftlichen Anspruch schade. Die Biologin hielt dagegen, dass gesellschaftliche Akzeptanz ohne Verständlichkeit kaum zu erreichen sei – und dass Forschung, die niemand verstehe, auch niemanden überzeugen könne.`,
+        english_summary: "A biologist realises her bee study is unreadable to laypeople and begins presenting it in videos and public talks. Some colleagues worry about oversimplification; she argues that research nobody understands persuades nobody.",
+        questions: [
+          { question: "Was untersuchte die Biologin?", options: ["Das Verhalten von Bienen in Stadtgärten", "Das Klima in Städten", "Die Qualität von Honig"], correct: 0, explanation: "'... das Verhalten von Bienen in städtischen Gärten.'" },
+          { question: "Warum waren die Ergebnisse für Laien kaum verständlich?", options: ["Sie waren fachlich schwach", "Sie waren in einer Fachzeitschrift für Experten", "Sie waren zu kurz"], correct: 1, explanation: "The results were convincing but written for experts." },
+          { question: "Was lernte sie bei Veranstaltungen und Videos?", options: ["Zusammenhänge auf zentrale Aussagen zu reduzieren", "Mehr Geld zu verdienen", "Schneller zu schreiben"], correct: 0, explanation: "'... komplizierte Zusammenhänge auf wenige zentrale Aussagen zu reduzieren.'" },
+          { question: "Was befürchteten manche Kollegen?", options: ["Dass Vereinfachung dem wissenschaftlichen Anspruch schade", "Dass Videos zu lang seien", "Dass die Studie falsch sei"], correct: 0, explanation: "'... dass die Vereinfachung dem wissenschaftlichen Anspruch schade.'" }
+        ]
       }
     ],
     vocabulary: [
@@ -911,7 +1042,27 @@ const CONTENT_EXTRA = {
       { word: "zunehmend", type: "adjective", pronunciation: "TSOO-nay-ment", meaning: "increasing, increasingly", example: "Das Thema wird zunehmend wichtig.", example_english: "The topic is becoming increasingly important.", tip: "Partizip I of zunehmen." },
       { word: "grundlegend", type: "adjective", pronunciation: "GROONT-lay-gent", meaning: "fundamental", example: "Das ändert die Lage grundlegend.", example_english: "That fundamentally changes the situation.", tip: "Grund (ground) + legen (to lay)." },
       { word: "die Beschäftigten", type: "noun", pronunciation: "be-SHEF-tikh-ten", meaning: "employees (the employed)", example: "Die Beschäftigten streiken.", example_english: "The employees are on strike.", tip: "Used like an adjective noun." },
-      { word: "den Anschluss verlieren", type: "phrase", pronunciation: "den AN-shloos fer-LEE-ren", meaning: "to fall behind", example: "Wir dürfen den Anschluss nicht verlieren.", example_english: "We must not fall behind.", tip: "Anschluss also means a (train) connection." }
+      { word: "den Anschluss verlieren", type: "phrase", pronunciation: "den AN-shloos fer-LEE-ren", meaning: "to fall behind", example: "Wir dürfen den Anschluss nicht verlieren.", example_english: "We must not fall behind.", tip: "Anschluss also means a (train) connection." },
+      { word: "die Auswirkung", type: "noun", pronunciation: "OWS-vir-koong", meaning: "effect, impact", example: "Die Auswirkungen sind noch nicht absehbar.", example_english: "The effects cannot yet be foreseen.", tip: "Usually plural; 'Auswirkungen auf' + accusative." },
+      { word: "bewältigen", type: "verb", pronunciation: "beh-VEL-ti-gen", meaning: "to cope with, to manage", example: "Sie bewältigte die Aufgabe problemlos.", example_english: "She managed the task without problems.", tip: "Stronger than 'schaffen'; for tasks and crises." },
+      { word: "der Rückgang", type: "noun", pronunciation: "RÜK-gang", meaning: "decline, decrease", example: "Es gab einen Rückgang der Besucherzahlen.", example_english: "There was a decline in visitor numbers.", tip: "Verb phrase: zurückgehen." },
+      { word: "anerkennen", type: "verb", pronunciation: "AN-er-ken-en", meaning: "to recognise, to acknowledge", example: "Der Abschluss wird in Deutschland anerkannt.", example_english: "The qualification is recognised in Germany.", tip: "Noun: die Anerkennung; separable in some uses (erkennt ... an)." },
+      { word: "die Zuständigkeit", type: "noun", pronunciation: "TSOO-shten-dikh-kyt", meaning: "responsibility, jurisdiction", example: "Das fällt nicht in meine Zuständigkeit.", example_english: "That does not fall within my remit.", tip: "Adjective: zuständig." },
+      { word: "nachvollziehbar", type: "adjective", pronunciation: "NAKH-fol-tsee-bar", meaning: "comprehensible, understandable", example: "Die Entscheidung ist nachvollziehbar.", example_english: "The decision is understandable.", tip: "Verb: nachvollziehen (to follow someone's reasoning)." },
+      { word: "in Erwägung ziehen", type: "phrase", pronunciation: "in er-VAY-goong TSEE-en", meaning: "to consider, to contemplate", example: "Wir ziehen einen Umzug in Erwägung.", example_english: "We are considering a move.", tip: "Formal; 'erwägen' is the single verb." },
+      { word: "die Eigeninitiative", type: "noun", pronunciation: "Y-gen-in-i-tsia-TEE-veh", meaning: "own initiative", example: "Der Job erfordert viel Eigeninitiative.", example_english: "The job requires a lot of initiative.", tip: "Typical in job advertisements." },
+      { word: "widerspiegeln", type: "verb", pronunciation: "VEE-der-shpee-geln", meaning: "to reflect, to mirror", example: "Die Zahlen spiegeln die Lage wider.", example_english: "The figures reflect the situation.", tip: "Separable in practice: spiegelt ... wider." },
+      { word: "die Gegebenheit", type: "noun", pronunciation: "geh-GAY-ben-hyt", meaning: "circumstance, given condition", example: "Wir müssen uns den Gegebenheiten anpassen.", example_english: "We must adapt to the circumstances.", tip: "Often plural: die Gegebenheiten." },
+      { word: "beeinträchtigen", type: "verb", pronunciation: "beh-YN-trekh-ti-gen", meaning: "to impair, to affect negatively", example: "Lärm beeinträchtigt die Konzentration.", example_english: "Noise impairs concentration.", tip: "Noun: die Beeinträchtigung." },
+      { word: "in Anspruch nehmen", type: "phrase", pronunciation: "in AN-shprookh NAY-men", meaning: "to make use of, to claim", example: "Er nahm die Hilfe nicht in Anspruch.", example_english: "He did not make use of the help.", tip: "Also means 'to take up (time)'." },
+      { word: "zur Verfügung stellen", type: "phrase", pronunciation: "tsoor fer-FÜ-goong SHTEL-en", meaning: "to make available", example: "Die Firma stellt Laptops zur Verfügung.", example_english: "The company provides laptops.", tip: "Related: 'zur Verfügung stehen' = to be available." },
+      { word: "das Ausmaß", type: "noun", pronunciation: "OWS-mahs", meaning: "extent, scale", example: "Das Ausmaß des Schadens ist enorm.", example_english: "The extent of the damage is enormous.", tip: "Plural: die Ausmaße." },
+      { word: "eindeutig", type: "adjective", pronunciation: "YN-doy-tikh", meaning: "unambiguous, clear", example: "Das Ergebnis ist eindeutig.", example_english: "The result is clear.", tip: "Opposite: mehrdeutig." },
+      { word: "veranschaulichen", type: "verb", pronunciation: "fer-AN-show-li-khen", meaning: "to illustrate, to make clear", example: "Ein Diagramm veranschaulicht den Trend.", example_english: "A diagram illustrates the trend.", tip: "From anschaulich (vivid)." },
+      { word: "die Auflage", type: "noun", pronunciation: "OWF-lah-geh", meaning: "condition, requirement; print run", example: "Die Genehmigung ist mit Auflagen verbunden.", example_english: "The permit comes with conditions.", tip: "Also: the number of copies of a book." },
+      { word: "geschweige denn", type: "phrase", pronunciation: "geh-SHVY-geh den", meaning: "let alone, not to mention", example: "Er kann kaum laufen, geschweige denn rennen.", example_english: "He can hardly walk, let alone run.", tip: "Used after a negative statement." },
+      { word: "die Rücksichtnahme", type: "noun", pronunciation: "RÜK-zikhts-nah-meh", meaning: "consideration (for others)", example: "Das erfordert gegenseitige Rücksichtnahme.", example_english: "That requires mutual consideration.", tip: "Related: rücksichtsvoll." },
+      { word: "angesichts", type: "preposition", pronunciation: "AN-geh-zikhts", meaning: "in view of, given (+ genitive)", example: "Angesichts der Lage ist Eile geboten.", example_english: "Given the situation, haste is called for.", tip: "Formal genitive preposition." }
     ]
   },
 
@@ -938,7 +1089,19 @@ const CONTENT_EXTRA = {
       { sentence: "Wäre er pünktlich gekommen, ___ das Missverständnis vermeidbar gewesen.", answer: "wäre", hint: "Konjunktiv II Plusquamperfekt: sein", english: "Had he arrived on time, the misunderstanding would have been avoidable.",
         explanation: "Unreal past: wäre + Partizip II of sein (gewesen). With sein, the auxiliary is 'wäre'." },
       { sentence: "Sie bestand darauf, dass der Vertrag unverzüglich ___ werde.", answer: "geprüft", hint: "Partizip II (prüfen), passive Konjunktiv I", english: "She insisted that the contract be reviewed immediately.",
-        explanation: "Passive in Konjunktiv I: werde + Partizip II → geprüft werde." }
+        explanation: "Passive in Konjunktiv I: werde + Partizip II → geprüft werde." },
+      { sentence: "Der Minister betonte, es ___ keine Alternative zu diesem Kurs.", answer: "gebe", hint: "Konjunktiv I of geben", english: "The minister stressed that there was no alternative to this course.",
+        explanation: "In indirect speech the formal written register uses Konjunktiv I: es gebe." },
+      { sentence: "Hätte man die Warnungen ernst genommen, ___ das Unglück vermeidbar gewesen.", answer: "wäre", hint: "Konjunktiv II Vergangenheit of sein", english: "Had the warnings been taken seriously, the disaster would have been avoidable.",
+        explanation: "An inverted unreal condition about the past uses Konjunktiv II: wäre ... gewesen." },
+      { sentence: "Die Gesellschaft behält sich das Recht ___, die Bedingungen zu ändern.", answer: "vor", hint: "separable verb prefix: sich vorbehalten", english: "The company reserves the right to change the terms.",
+        explanation: "'sich etwas vorbehalten' is a separable verb typical of legal and formal texts: behält sich ... vor." },
+      { sentence: "Er hat das Thema nur am ___ gestreift, ohne in die Tiefe zu gehen.", answer: "Rande", hint: "fixed expression: am Rande + gestreift", english: "He only touched on the topic in passing, without going into depth.",
+        explanation: "'am Rande erwähnen/streifen' means to mention in passing. 'Rand' takes an old dative -e in this set phrase." },
+      { sentence: "Das Gremium gelangte ___ der Auffassung, dass weitere Prüfungen nötig seien.", answer: "zu", hint: "preposition: gelangen zu", english: "The committee came to the view that further checks were necessary.",
+        explanation: "'zu einer Auffassung/Erkenntnis gelangen' is a formal fixed phrase. 'zu' is followed by the dative: zu der Auffassung." },
+      { sentence: "Der Vorsitzende wies die Vorwürfe ___ von sich.", answer: "weit", hint: "idiom: weit von sich weisen", english: "The chairman firmly rejected the accusations.",
+        explanation: "'etwas weit von sich weisen' is an idiom meaning to reject something emphatically." }
     ],
     stories: [
       {
@@ -960,6 +1123,17 @@ const CONTENT_EXTRA = {
           { question: "Was betonen Linguisten?", options: ["Wandel sei ein Zeichen von Niedergang", "Wandel sei ein Zeichen von Lebendigkeit", "Wandel müsse verhindert werden"], correct: 1, explanation: "'... kein Zeichen von Niedergang, sondern von Lebendigkeit'." },
           { question: "Was bewirkt laut Text die Globalisierung?", options: ["Eine Aufwertung regionaler Varietäten", "Das Verschwinden aller Dialekte", "Eine Vereinfachung der Grammatik"], correct: 0, explanation: "'... zur Aufwertung regionaler Varietäten'." }
         ]
+      },
+      {
+        title: "Das Ehrenamt im Wandel",
+        story: `Das Ehrenamt galt lange als Rückgrat des gesellschaftlichen Zusammenhalts: Freiwillige Feuerwehren, Sportvereine und Kirchengemeinden lebten von Menschen, die sich über Jahrzehnte hinweg an eine Organisation banden. Soziologen beobachten indes seit einiger Zeit einen Strukturwandel, der diese traditionelle Form des Engagements zunehmend infrage stellt.\n\nStatt sich langfristig zu verpflichten, bevorzugen viele Menschen heute projektbezogene Einsätze, die sich flexibel in einen ohnehin dichten Alltag einfügen lassen. Wer sich einen Nachmittag lang an einer Aufräumaktion beteiligt, tut dies oft mit großer Überzeugung, scheut aber die Übernahme eines Vorstandsamtes. Vereine klagen daher über Nachwuchsprobleme, während spontane Initiativen mühelos Hunderte Helfer mobilisieren.\n\nOb man darin einen Verlust oder lediglich eine Verlagerung sehen soll, ist umstritten. Pessimisten warnen vor einer Erosion verlässlicher Strukturen, auf die insbesondere der ländliche Raum angewiesen sei. Optimisten entgegnen, das Engagement habe sich nicht verringert, sondern lediglich neue Formen gefunden, die den veränderten Lebensumständen besser entsprächen.\n\nEinigkeit herrscht darüber, dass Organisationen ihre Angebote überdenken müssen. Wer Freiwillige gewinnen will, wird ihnen künftig mehr Gestaltungsspielraum und kürzere Verpflichtungszeiträume einräumen müssen.`,
+        english_summary: "Volunteering is shifting from long-term membership to flexible, project-based engagement. Pessimists see erosion, optimists see new forms; both agree organisations must offer more freedom and shorter commitments.",
+        questions: [
+          { question: "Wovon lebten traditionelle Vereine laut Text?", options: ["Von langfristig gebundenen Freiwilligen", "Von staatlichen Zuschüssen", "Von Spenden aus dem Ausland"], correct: 0, explanation: "'... lebten von Menschen, die sich über Jahrzehnte hinweg an eine Organisation banden.'" },
+          { question: "Was bevorzugen viele Menschen heute?", options: ["Projektbezogene Einsätze", "Vorstandsämter", "Bezahlte Tätigkeiten"], correct: 0, explanation: "'... bevorzugen viele Menschen heute projektbezogene Einsätze.'" },
+          { question: "Wovor warnen die Pessimisten?", options: ["Vor einer Erosion verlässlicher Strukturen", "Vor zu vielen Initiativen", "Vor steigenden Kosten"], correct: 0, explanation: "'Pessimisten warnen vor einer Erosion verlässlicher Strukturen.'" },
+          { question: "Was müssen Organisationen laut Text künftig bieten?", options: ["Mehr Gestaltungsspielraum und kürzere Verpflichtungen", "Höhere Mitgliedsbeiträge", "Strengere Regeln"], correct: 0, explanation: "'... mehr Gestaltungsspielraum und kürzere Verpflichtungszeiträume.'" }
+        ]
       }
     ],
     vocabulary: [
@@ -974,7 +1148,27 @@ const CONTENT_EXTRA = {
       { word: "gewährleisten", type: "verb", pronunciation: "ge-VAIR-ly-sten", meaning: "to guarantee, to ensure", example: "Wir gewährleisten die Sicherheit.", example_english: "We guarantee safety.", tip: "Stronger than 'sicherstellen' in legal texts." },
       { word: "die Nivellierung", type: "noun", pronunciation: "ni-ve-LEE-roong", meaning: "levelling out", example: "Die Nivellierung der Unterschiede.", example_english: "The levelling out of differences.", tip: "From French niveau; negative nuance." },
       { word: "das Gutachten", type: "noun", pronunciation: "GOOT-akh-ten", meaning: "expert report", example: "Ein Gutachten wurde erstellt.", example_english: "An expert report was drawn up.", tip: "Literally 'good opinion'." },
-      { word: "unverzüglich", type: "adjective", pronunciation: "OON-fer-tsük-likh", meaning: "immediately, without delay", example: "Bitte antworten Sie unverzüglich.", example_english: "Please reply without delay.", tip: "A legal term: 'ohne schuldhaftes Zögern'." }
+      { word: "unverzüglich", type: "adjective", pronunciation: "OON-fer-tsük-likh", meaning: "immediately, without delay", example: "Bitte antworten Sie unverzüglich.", example_english: "Please reply without delay.", tip: "A legal term: 'ohne schuldhaftes Zögern'." },
+      { word: "die Anmaßung", type: "noun", pronunciation: "AN-mah-soong", meaning: "presumption, arrogance", example: "Es wäre eine Anmaßung, das zu behaupten.", example_english: "It would be presumptuous to claim that.", tip: "Verb: sich etwas anmaßen." },
+      { word: "die Kohärenz", type: "noun", pronunciation: "ko-heh-RENTS", meaning: "coherence", example: "Dem Text fehlt es an Kohärenz.", example_english: "The text lacks coherence.", tip: "Adjective: kohärent; academic register." },
+      { word: "eklatant", type: "adjective", pronunciation: "ek-la-TANT", meaning: "glaring, blatant", example: "Das ist ein eklatanter Widerspruch.", example_english: "That is a glaring contradiction.", tip: "Usually negative: eklatanter Fehler, Verstoß." },
+      { word: "beschönigen", type: "verb", pronunciation: "beh-SHÖ-ni-gen", meaning: "to gloss over, to sugarcoat", example: "Man sollte die Lage nicht beschönigen.", example_english: "One should not gloss over the situation.", tip: "From schön (beautiful)." },
+      { word: "die Vorreiterrolle", type: "noun", pronunciation: "FOR-ry-ter-ro-leh", meaning: "pioneering role", example: "Das Land übernimmt eine Vorreiterrolle.", example_english: "The country is taking on a pioneering role.", tip: "Vorreiter = pioneer, trailblazer." },
+      { word: "etwas zum Anlass nehmen", type: "phrase", pronunciation: "tsoom AN-las NAY-men", meaning: "to take as an occasion/opportunity", example: "Er nahm den Jahrestag zum Anlass für eine Rede.", example_english: "He used the anniversary as an occasion for a speech.", tip: "Typical in formal speech." },
+      { word: "haarsträubend", type: "adjective", pronunciation: "HAR-shtroy-bent", meaning: "appalling, hair-raising", example: "Die Zustände sind haarsträubend.", example_english: "The conditions are appalling.", tip: "Literally 'making hair stand up'." },
+      { word: "der Trugschluss", type: "noun", pronunciation: "TROOK-shloos", meaning: "fallacy", example: "Das ist ein weit verbreiteter Trugschluss.", example_english: "That is a widespread fallacy.", tip: "Plural: die Trugschlüsse." },
+      { word: "ausufern", type: "verb", pronunciation: "OWS-oo-fern", meaning: "to get out of hand, to spiral", example: "Die Debatte drohte auszuufern.", example_english: "The debate threatened to get out of hand.", tip: "From Ufer (bank): to overflow its banks." },
+      { word: "die Verhältnismäßigkeit", type: "noun", pronunciation: "fer-HELT-nis-may-sikh-kyt", meaning: "proportionality", example: "Die Verhältnismäßigkeit der Mittel wurde geprüft.", example_english: "The proportionality of the means was examined.", tip: "Key concept in German law." },
+      { word: "subsumieren", type: "verb", pronunciation: "zoop-zoo-MEE-ren", meaning: "to subsume", example: "Man kann beide Fälle unter einem Begriff subsumieren.", example_english: "Both cases can be subsumed under one term.", tip: "Academic and legal usage." },
+      { word: "abwägen", type: "verb", pronunciation: "AP-vay-gen", meaning: "to weigh up, to consider", example: "Man muss die Vor- und Nachteile abwägen.", example_english: "One must weigh up the pros and cons.", tip: "Separable: wägt ... ab." },
+      { word: "die Deutungshoheit", type: "noun", pronunciation: "DOY-toongs-hoh-hyt", meaning: "interpretive authority", example: "Wer hat die Deutungshoheit über die Geschichte?", example_english: "Who has interpretive authority over history?", tip: "Common in media and political debate." },
+      { word: "brisant", type: "adjective", pronunciation: "bri-ZANT", meaning: "explosive, highly sensitive", example: "Das Thema ist politisch brisant.", example_english: "The topic is politically explosive.", tip: "From French brisant; used for sensitive topics." },
+      { word: "in Anbetracht", type: "phrase", pronunciation: "in AN-beh-trakht", meaning: "in view of, considering", example: "In Anbetracht der Umstände ist das ein Erfolg.", example_english: "Considering the circumstances, this is a success.", tip: "Followed by genitive: in Anbetracht + genitive." },
+      { word: "sich anschicken", type: "verb", pronunciation: "zikh AN-shi-ken", meaning: "to be about to, to set about", example: "Das Land schickt sich an, die Regeln zu ändern.", example_english: "The country is about to change the rules.", tip: "Almost always followed by 'zu' + infinitive." },
+      { word: "der Paradigmenwechsel", type: "noun", pronunciation: "pa-ra-DIK-men-vek-sel", meaning: "paradigm shift", example: "Die Studie leitete einen Paradigmenwechsel ein.", example_english: "The study initiated a paradigm shift.", tip: "Plural: die Paradigmenwechsel." },
+      { word: "sich manifestieren", type: "verb", pronunciation: "zikh ma-ni-fes-TEE-ren", meaning: "to manifest itself", example: "Der Unmut manifestierte sich in Protesten.", example_english: "The discontent manifested itself in protests.", tip: "Formal verb of Latin origin." },
+      { word: "kontrovers", type: "adjective", pronunciation: "kon-tro-VERS", meaning: "controversial", example: "Die Frage wird kontrovers diskutiert.", example_english: "The question is discussed controversially.", tip: "Often used as adverb: kontrovers diskutieren." },
+      { word: "nichtsdestotrotz", type: "adverb", pronunciation: "nikhts-des-to-TROTS", meaning: "nevertheless", example: "Nichtsdestotrotz bleibt die Frage offen.", example_english: "Nevertheless, the question remains open.", tip: "Informal-formal; also: nichtsdestoweniger." }
     ]
   }
 };
